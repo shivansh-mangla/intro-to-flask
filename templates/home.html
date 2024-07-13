@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 40px;
+    }
+    img{
+        width: 100%;
+        height: 400px;
+    }
+    p{
+        font-size: 20px;
+        color: brown;
+        text-align: center;
+        margin: 0px 100px;
+    }
+    .jobs{
+        width: 80%;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .job-container{
+        width: 100%;
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .job-text{
+        width: 500px;
+        text-align: left;
+    }
+    button{
+        padding: 20px 40px;
+        border: none;
+        border: 1px solid black;
+        background-color: aqua;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1>Piku Careers</h1>
+    <img src="https://images.business.com/app/uploads/2011/06/12131215/Leadership-Skills.png">
+    <h2>About Piku</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Laborum vitae dicta quas impedit nulla distinctio pariatur officia minus expedita ipsum. 
+        Adipisci eveniet hic ut nisi autem eos nobis similique deleniti!
+    </p>
+    <h2>Open Positions</h2>
+
+    <div class="jobs">
+        {% for job in jobs %}
+            {% include 'jobitem.html' %}
+        {% endfor %}
+    </div>
+</body>
+</html>

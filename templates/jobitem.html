@@ -1,0 +1,10 @@
+<div class="job-container">
+    <div class="job-text">
+        <h2>{{job['title']}}</h2>
+        <p><b>Location: </b>{{job['location']}}</p>
+        {% if 'salary' in job %}
+        <p><b>Salary: </b>{{job['salary']}}</p>
+        {% endif %}
+    </div>
+    <button>Apply Now</button>
+</div>
